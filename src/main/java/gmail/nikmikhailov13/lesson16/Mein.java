@@ -9,8 +9,7 @@ public class Mein {
     public static final int K = 7;
 
     public static void main(String[] args) {
-       Cat cat = new Cat();
-       cat.getName();
+
     }
 
 
