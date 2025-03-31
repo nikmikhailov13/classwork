@@ -1,4 +1,4 @@
-package gmail.nikmikhailov13.lesson16.animals;
+package gmail.nikmikhailov13.lesson29.animals;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
