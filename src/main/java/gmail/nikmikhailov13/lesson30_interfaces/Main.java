@@ -8,9 +8,9 @@ public class Main {
 
         viber.showAd();
         viber.send("Hello World");
-        String receivedMessage = viber.read("З Пасхою! 🐣");
         viber.showDefaultAd();
 
+        String receivedMessage = viber.read("З Пасхою! 🐣");
         System.out.println(receivedMessage);
 
         System.out.println(Ad.DEFAULT_AD);
