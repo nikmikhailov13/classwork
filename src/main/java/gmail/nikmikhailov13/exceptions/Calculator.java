@@ -2,10 +2,7 @@ package gmail.nikmikhailov13.exceptions;
 
 public class Calculator {
 
-    public static int divide(int a, int b) throws DivisionByZeroException {
-        if (b == 0) {
-            throw new DivisionByZeroException();
-        }
+    public static int divide(int a, int b)  {
         return a / b;
     }
 }
