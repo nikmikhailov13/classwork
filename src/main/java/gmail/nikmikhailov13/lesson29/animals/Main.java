@@ -1,17 +1,30 @@
 package gmail.nikmikhailov13.lesson29.animals;
 
+import java.util.Optional;
+
 public class Main {
 
     public static void main(String[] args) {
-        GroomingSalon salon = new GroomingSalon("Paws & Tails");
+        Zoo zoo = new Zoo(1);
+        Fox fox1 = new Fox(10, 3, "Firfirfir", false);
+        Fox fox2 = new Fox(3, 4, "Fyrfyrfyr", false);
+        Fox fox3 = new Fox(3, 4, "Kiskiskis", false);
 
-        Cat cat = new Cat(5.0, 3, "Amur", Breed.SCOTISH);
-        Fox fox = new Fox(5.0, 3, true);
+        zoo.add(fox1);
+        zoo.add(fox2);
+        zoo.add(fox3);
 
-        salon.groom(cat);
-        salon.groom(fox);
+        System.out.println(zoo);
+
+        Optional<Fox> optionalFox = zoo.searchFoxByName("Kiskiskis");
+
+        if (optionalFox.isPresent()) {
+            Fox fox = optionalFox.get();
+            System.out.println(fox);
+        } else {
+            System.out.println("No Fox found");
+        }
 
     }
-
 
 }
