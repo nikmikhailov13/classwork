@@ -1,4 +1,4 @@
-package gmail.nikmikhailov13.lesson39;
+package gmail.nikmikhailov13.lesson38;
 
 public class Box<E> {
     private E element;
