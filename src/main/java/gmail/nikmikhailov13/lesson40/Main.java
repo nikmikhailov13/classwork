@@ -2,11 +2,19 @@ package gmail.nikmikhailov13.lesson40;
 
 public class Main {
     public static void main(String[] args) {
-        Operationable<String> operationable =
-                (x,  y) -> x + y;
 
-        String result = operationable.calculate("123", "456");
+        Playable playable = (name, size) -> {
+            System.out.println("Name: " + name + " | Size: " + size);
+        };
 
-        System.out.println(result);
+        playable.play("CoD", 10);
+
+        String a = Playable.MAX_STRING;
+
+        Computer computer = new Computer();
+
+        Computer computer1 = new Computer(1,  "123");
+
+        computer.playGame(playable, "Warcraft", 20);
     }
 }
