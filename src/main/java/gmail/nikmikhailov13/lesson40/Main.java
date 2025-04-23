@@ -1,20 +1,43 @@
 package gmail.nikmikhailov13.lesson40;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BinaryOperator;
+import java.util.function.Predicate;
+
 public class Main {
     public static void main(String[] args) {
 
-        Playable playable = (name, size) -> {
-            System.out.println("Name: " + name + " | Size: " + size);
+        Predicate<String> containsNina = (String sentence) -> sentence.contains("Nina");
+
+        String sentence = "Today we have Vadym, Taras, Volodymyr, Rostyslav, Mykonos :)";
+
+        boolean result = containsNina.test(sentence);
+
+        System.out.println(result);
+
+        List<Integer> list = new ArrayList<>();
+
+        list.forEach((element) -> {
+            System.out.println(element);
+        });
+
+
+        // 20, 50 -> 2050
+        BinaryOperator<Integer> magicAddition = (p1, p2) -> {
+            // "20"
+            String p1Str = p1.toString();
+            // "50"
+            String p2Str = p2.toString();
+
+            // "2050"
+            String resultStr = p1Str + p2Str;
+
+            // 2050
+            return Integer.parseInt(resultStr);
         };
 
-        playable.play("CoD", 10);
-
-        String a = Playable.MAX_STRING;
-
-        Computer computer = new Computer();
-
-        Computer computer1 = new Computer(1,  "123");
-
-        computer.playGame(playable, "Warcraft", 20);
+        int res = magicAddition.apply(1, 11);
+        System.out.println(res * 6);
     }
 }

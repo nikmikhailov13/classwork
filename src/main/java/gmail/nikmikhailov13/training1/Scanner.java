@@ -1,4 +1,4 @@
-package gmail.nikmikhailov13.lesson40.inheritance;
+package gmail.nikmikhailov13.training1;
 
 public class Scanner implements Scannable {
     @Override
