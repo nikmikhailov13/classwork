@@ -1,58 +1,44 @@
 package gmail.nikmikhailov13.lesson41;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 public class Main {
-
     public static void main(String[] args) {
+        List<Player> footballTeam = new ArrayList<>();
 
-        List<Integer> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
+        Player player1 = new Player(59, "John", 20);
+        Player player2 = new Player(67, "Roger", 22);
+        Player player3 = new Player(45, "Steven", 24);
+        Player player4 = new Player(65, "Nash", 20);
 
-        list1.add(1);
-        list1.add(2);
-        list1.add(3);
+//        compare player1 and player2 (by ranking)
+//        "player1 < player2"
+//        "player1 == player2"
+//        "player1 > player2"
+//        String result = "";
+//        switch (player1.compareTo(player3)) {
+//            case -1:
+//                result = "player-left < player-right";
+//                break;
+//            case 0:
+//                result = "player-left == player-right";
+//                break;
+//            case 1:
+//                result = "player-left > player-right";
+//                break;
+//        }
+//
+//        System.out.println(result);
 
-        list2.add(2);
-        list2.add(3);
+        footballTeam.add(player1);
+        footballTeam.add(player2);
+        footballTeam.add(player3);
+        footballTeam.add(player4);
 
-        Set<Integer> mergedSet = mergeTwoLists(list1, list2);
-
-        System.out.println(mergedSet);
-
-        int sumOfOddNumbers = sumOddNumbers(list1);
-
-        System.out.println(sumOfOddNumbers);
-    }
-
-    // Напишіть метод, який приймає список цілих чисел (List<Integer>) та повертає суму всіх
-    // непарних чисел ( if (num % 2 != 0) ) у цьому списку.
-    public static int sumOddNumbers(List<Integer> numbers) {
-        int sum = 0;
-        for (int number : numbers) {
-            if (number % 2 != 0) {
-                sum += number;
-            }
-        }
-        return sum;
-    }
-
-    // Напишіть метод, який приймає два списки цілих чисел і повертає
-    // множину (Set) з елементів, спільних для обох списків.
-    public static Set<Integer> mergeTwoLists(List<Integer> list1, List<Integer> list2) {
-        Set<Integer> set1 = new HashSet<>();
-
-        for (int number : list1) {
-            set1.add(number);
-        }
-
-        for (int number : list2) {
-            set1.add(number);
-        }
-
-        return set1;
+        System.out.println("Before Sorting : " + footballTeam);
+        footballTeam.sort(Collections.reverseOrder());
+        System.out.println("After Sorting : " + footballTeam);
     }
 }

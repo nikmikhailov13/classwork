@@ -1,4 +1,4 @@
-package gmail.nikmikhailov13.lesson30_interfaces;
+package gmail.nikmikhailov13.lesson30;
 
 public interface Ad {
 

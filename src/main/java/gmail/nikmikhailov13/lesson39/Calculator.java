@@ -1,4 +1,4 @@
-package gmail.nikmikhailov13.lesson40;
+package gmail.nikmikhailov13.lesson39;
 
 public class Calculator implements Operationable<String> {
 
