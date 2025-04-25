@@ -2,6 +2,7 @@ package academy.codillas.classwork.lesson41;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -40,5 +41,14 @@ public class Main {
         System.out.println("Before Sorting : " + footballTeam);
         footballTeam.sort(Collections.reverseOrder());
         System.out.println("After Sorting : " + footballTeam);
+
+        Integer myInt1 = Integer.valueOf(3); // boxing -> запаковка
+        Integer myInt2 = Integer.valueOf(5);
+
+        System.out.println(
+                myInt1.compareTo(myInt2)
+        );
+
+        Comparator<Player> rankingComparator1 = Comparator.comparing(Player::getRanking);
     }
 }
