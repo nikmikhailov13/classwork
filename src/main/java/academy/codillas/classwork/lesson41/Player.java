@@ -1,6 +1,8 @@
 package academy.codillas.classwork.lesson41;
 
-public class Player implements Comparable<Player> {
+import java.util.Comparator;
+
+public class Player implements Comparable<Player>, Comparator<String> {
     private int ranking;
     private String name;
     private int age;
@@ -46,5 +48,11 @@ public class Player implements Comparable<Player> {
     @Override
     public String toString() {
         return getName() + "-" + getRanking() + "-" + getAge();
+    }
+
+
+    @Override
+    public int compare(String o1, String o2) {
+        return 0;
     }
 }
