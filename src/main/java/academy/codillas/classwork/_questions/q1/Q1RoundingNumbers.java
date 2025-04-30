@@ -1,4 +1,4 @@
-package academy.codillas.classwork._questions;
+package academy.codillas.classwork._questions.q1;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
